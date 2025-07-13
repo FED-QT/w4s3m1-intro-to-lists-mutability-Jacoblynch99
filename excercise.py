@@ -19,21 +19,27 @@ print("After x.append(4):", x, y, id(x), id(y))
 # Part 2: Lists & Loops
 names = ["alice", "bob", "charlie", "dana"]
 
-# Task A: build upper_names
+# Task A: Upper‑case each name and store in new list
 upper_names = []
 for n in names:
-    # TODO: append uppercase n
-    pass
+    upper_names.append(n.capitalize())  # Or use n.upper() for all caps
 
-# Task B: enumerate over upper_names
-# for :
-    # TODO: print index and name
-#    pass
+# Task B: Use enumerate to print index + 1 alongside name
+# Expected output:
+# 1. Alice
+# 2. Bob
+# ...
+for idx, name in enumerate(upper_names, start=1):
+    print(f"{idx}. {name}")
 
-# Task C: demo two list methods
-# 1. insert
-# TODO
-# 2. remove
-# TODO
-# 3. sort
-# TODO
+# Task C: Demonstrate at least two list methods (e.g., insert, pop, remove, sort)
+#   1. Insert a new name at position 2
+upper_names.insert(1, "Eve")
+print("After insert:", upper_names)
+#   2. Remove "charlie"
+upper_names.remove("Charlie")
+print("After remove:", upper_names)
+#   3. Sort the list
+upper_names.sort()
+print("After sort:", upper_names)
+# Print the list after each operation.
